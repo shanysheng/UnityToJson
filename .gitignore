@@ -5,3 +5,11 @@ UnityToJson/UnityToJson.sln
 UnityToJson/UnityToJson.userprefs
 
 UnityToJson/Assembly-CSharp.csproj
+
+UnityToJson/test.json
+
+UnityToJson/obj/Debug/Assembly-CSharp.dll.mdb
+
+UnityToJson/obj/Debug/Assembly-CSharp.dll
+
+UnityToJson/obj/Debug/Assembly-CSharp.csproj.FilesWrittenAbsolute.txt
