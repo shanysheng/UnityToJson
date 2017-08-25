@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class ToJsonGameObject {
 
-	public static void ExportGameObject (JSONObject parentJsonObj, GameObject go)
+	public static void ExportGameObject (JSONObject jsonGo, GameObject go)
 	{
-		JSONObject jsonGo = JSONObject.obj;
-		parentJsonObj.AddField ("gameobject", jsonGo);
-
 		jsonGo.AddField("name", go.name);
 
 		JSONObject scaleobj = ToJsonCommon.ToJsonObjectVector3 (go.transform.localScale);
@@ -17,13 +14,35 @@ public class ToJsonGameObject {
 		jsonGo.AddField ("scale", scaleobj);
 		jsonGo.AddField ("rotate", rotateobj);
 		jsonGo.AddField ("translate", translateobj);
-	}
 
-	static void ExportCamera(JSONObject jsonobj, GameObject go)
-	{
-	}
+		if (go.GetComponent<Camera>() != null)
+			ToJsonCamera.ExportCamera(jsonGo, go.GetComponent<Camera>());
 
-	static void Export(JSONObject jsonobj, Transform transform)
-	{
+		if (go.GetComponent<Light>() != null)
+			ToJsonLight.ExportLight(jsonGo, go.GetComponent<Light>());
+
+		if (go.GetComponent<MeshRenderer>() != null)
+			ToJsonMeshRenderer.ExportMeshRenderer(jsonGo, go.GetComponent<MeshRenderer>());
+
+		if (go.GetComponent<SkinnedMeshRenderer>() != null)
+			ToJsonSkinnedMeshRenderer.ExportSkinnedMeshRenderer(jsonGo, go.GetComponent<SkinnedMeshRenderer>());
+
+		if (go.GetComponent<ParticleSystem>() != null)
+			ToJsonParticleSystem.ExportParticleSystem(jsonGo, go.GetComponent<ParticleSystem>());
+
+
+		Transform transform = go.transform;
+		int childcount = transform.childCount;
+		if (childcount > 0) {
+			JSONObject childArray = JSONObject.arr;
+			jsonGo.AddField ("children", childArray);
+			for (int i = 0; i < childcount; ++i) {
+				Transform child = transform.GetChild (i);
+				GameObject childgo = child.gameObject;
+				JSONObject childJsonGO = JSONObject.obj;
+				ToJsonGameObject.ExportGameObject (childJsonGO, childgo);
+				childArray.Add (childJsonGO);
+			}
+		}
 	}
 }

@@ -17,16 +17,22 @@ public class UnityToJsonExporter
 			StreamWriter jsonfile = new StreamWriter(filestream);
 
 			Scene scene = SceneManager.GetActiveScene ();
-			JSONObject rootobj = JSONObject.obj;
+			JSONObject sceneobj = JSONObject.obj;
+			JSONObject childArray = JSONObject.arr;
+
+			sceneobj.AddField ("name", scene.name);
+			sceneobj.AddField ("children", childArray);
 
 			int root_count = scene.rootCount;
 			GameObject[] goArray = scene.GetRootGameObjects ();
 			for (int i = 0; i < root_count; ++i) {
 				GameObject go = goArray [i];
+				JSONObject rootobj = JSONObject.obj;
 				ToJsonGameObject.ExportGameObject (rootobj, go);
+				childArray.Add (rootobj);
 			}
 
-			jsonfile.Write(rootobj.Print(true));
+			jsonfile.Write(sceneobj.Print(true));
 			jsonfile.Close();
 			filestream.Close();
 		}
