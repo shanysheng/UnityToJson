@@ -1,8 +1,25 @@
-﻿using System.Collections;
+﻿/*
+* Copyright 2017 sheng chongshan. All rights reserved.
+* email: shany.sheng@qq.com
+* License: https://github.com/shanysheng/RenderPipeline/blob/master/LICENSE
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ToJsonCommon {
+
+	public static JSONObject ToJsonObjectRect(Rect rect )
+	{
+		JSONObject result = JSONObject.arr;
+		result.Add(rect.x);
+		result.Add(rect.y);
+		result.Add(rect.width);
+		result.Add(rect.height);
+		result.writesingleline = true; 
+		return result;
+	}
 
 	public static JSONObject ToJsonObjectColor(Color color )
 	{
