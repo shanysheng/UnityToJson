@@ -3,7 +3,7 @@ Export unity3d scene,mesh,material etc to json file
 
 ## Gameobject
 
-```json
+```
 {
 	"name":"Main Camera",
 	"scale":[1,1,1],
@@ -13,7 +13,7 @@ Export unity3d scene,mesh,material etc to json file
 }
 ```
 ## Camera
-```json
+```
 "cameradef":{
 	"projection": orthographic or perspective,
 	"fov": field of view,
@@ -30,7 +30,7 @@ Export unity3d scene,mesh,material etc to json file
 }
 ```
 ## Example
-```json
+```
 {
 	"name":"",
 	"children":[
