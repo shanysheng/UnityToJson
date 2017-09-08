@@ -28,8 +28,10 @@ Export unity3d scene,mesh,material etc to json file
 	"bmsaa":enable msaa ,
 	"occlusioncull": enable occlusion culling
 }
+```
 
 ## Light
+
 ```
 "lightdef":{
 	"type":"Directional",
@@ -44,9 +46,8 @@ Export unity3d scene,mesh,material etc to json file
 	"shadowstrength":1,
 	"cullflag":"-1"
 }
+```
 
-```
-```
 ## Example
 ```json
 {
