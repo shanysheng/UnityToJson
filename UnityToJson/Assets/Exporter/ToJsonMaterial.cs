@@ -10,8 +10,10 @@ using UnityEngine;
 
 public class ToJsonMaterial {
 
-	void ExportMaterial(Material inmat)
+	public static JSONObject ExportMaterial(Material inmat)
 	{
+		JSONObject jsonobj = JSONObject.obj;
 
+		return jsonobj;
 	}
 }

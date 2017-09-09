@@ -8,7 +8,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToJsonSkybox {
+public class ToJsonEnvironment {
 
+	public static JSONObject ExportEnvironment()
+	{
+		JSONObject jsonobj = JSONObject.obj;
+
+		return jsonobj;
+	}
 
 }

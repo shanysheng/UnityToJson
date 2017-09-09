@@ -10,11 +10,20 @@ using UnityEngine;
 
 public class ToJsonCollider {
 
+	public static void ExportCollider(GameObject go)
+	{
+		
+	}
 
-	void Export(JSONObject jsonobj, BoxCollider boxcollider){}
-	void Export(JSONObject jsonobj, SphereCollider boxcollider){}
-	void Export(JSONObject jsonobj, TerrainCollider boxcollider){}
-	void Export(JSONObject jsonobj, MeshCollider boxcollider){}
-	void Export(JSONObject jsonobj, CapsuleCollider boxcollider){}
+
+	public static void ExportBoxCollider(JSONObject jsonobj, BoxCollider boxcollider)
+	{
+		
+	}
+
+	public static void ExportSphereCollider(JSONObject jsonobj, SphereCollider boxcollider){}
+	public static void ExportTerrainCollider(JSONObject jsonobj, TerrainCollider boxcollider){}
+	public static void ExportMeshCollider(JSONObject jsonobj, MeshCollider boxcollider){}
+	public static void ExportCapsuleCollider(JSONObject jsonobj, CapsuleCollider boxcollider){}
 
 }

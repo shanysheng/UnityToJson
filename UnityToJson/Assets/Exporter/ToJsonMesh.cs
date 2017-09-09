@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonMesh
 {
-	public void Export(JSONObject jsonobj, Mesh mesh)
+	public static void ExportMesh(JSONObject goObj, Mesh mesh)
     {
         
     }

@@ -10,5 +10,5 @@ using UnityEngine;
 
 public class ToJsonTexture {
 
-	void Export(JSONObject jsonobj, Texture2D tex2d){}
+	void Export(JSONObject goObj, Texture2D tex2d){}
 }

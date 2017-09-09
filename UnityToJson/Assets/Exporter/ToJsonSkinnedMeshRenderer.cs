@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonSkinnedMeshRenderer {
 
-	public static void ExportSkinnedMeshRenderer(JSONObject jsonobj, SkinnedMeshRenderer smrender)
+	public static void ExportSkinnedMeshRenderer(JSONObject goObj, SkinnedMeshRenderer smrender)
     {
         
     }
