@@ -3,7 +3,8 @@ UnityToJson/Temp/
 UnityToJson/UnityToJson.csproj
 UnityToJson/UnityToJson.sln
 UnityToJson/UnityToJson.userprefs
-
+UnityToJson/Assets/VikingDemo/
+UnityToJson/Assets/Standard Assets/
 UnityToJson/Assembly-CSharp.csproj
 
 UnityToJson/test.json
