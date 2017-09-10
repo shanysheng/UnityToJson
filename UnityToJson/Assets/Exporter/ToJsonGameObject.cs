@@ -36,8 +36,7 @@ public class ToJsonGameObject {
 		if (go.GetComponent<ParticleSystem>() != null)
 			ToJsonParticleSystem.ExportParticleSystem(jsonGo, go.GetComponent<ParticleSystem>());
 		
-
-		ToJsonCollider.ExportCollider (go);
+		ToJsonCollider.ExportCollider (jsonGo, go);
 
 		Transform transform = go.transform;
 		int childcount = transform.childCount;

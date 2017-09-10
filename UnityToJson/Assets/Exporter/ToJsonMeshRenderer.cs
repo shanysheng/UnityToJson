@@ -25,8 +25,8 @@ public class ToJsonMeshRenderer {
 
 		if (mrender.gameObject.GetComponent<MeshFilter> () != null) {
 			MeshFilter filter = mrender.gameObject.GetComponent<MeshFilter> ();
-			if (filter.mesh != null)
-				ToJsonMesh.ExportMesh (jsonobj, filter.mesh);
+			if (filter.sharedMesh != null)
+				ToJsonMesh.ExportMesh (jsonobj, filter.sharedMesh);
 		}
     }
 }
