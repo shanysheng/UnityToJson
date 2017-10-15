@@ -13,7 +13,7 @@ public class ToJsonMeshRenderer {
 	public static void ExportMeshRenderer(JSONObject goObj, MeshRenderer mrender)
     {
 		JSONObject jsonobj = JSONObject.obj;
-        
+
 		jsonobj.AddField ("castshadow", mrender.shadowCastingMode.ToString());
 		jsonobj.AddField ("receiveshadow", mrender.receiveShadows);
 
@@ -28,5 +28,7 @@ public class ToJsonMeshRenderer {
 			if (filter.sharedMesh != null)
 				ToJsonMesh.ExportMesh (jsonobj, filter.sharedMesh);
 		}
+
+        goObj.AddField("meshrender", jsonobj);
     }
 }
