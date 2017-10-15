@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonTexture {
 
-    void Export(ToJsonContext context, JSONObject goObj, Texture2D tex2d)
+    public static void Export(ToJsonContext context, JSONObject goObj, Texture2D tex2d)
     {
         
     }

@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonTrailRenderer {
 
-    void Export(ToJsonContext context, JSONObject goObj, TrailRenderer trailrenderer)
+    public static void Export(ToJsonContext context, JSONObject goObj, TrailRenderer trailrenderer)
     {
 
     }

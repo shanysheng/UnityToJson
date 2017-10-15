@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonAudio {
 
-    void Export(ToJsonContext context, JSONObject jsonobj, AudioSource audiosource)
+    public static void Export(ToJsonContext context, JSONObject jsonobj, AudioSource audiosource)
 	{
 
 	}

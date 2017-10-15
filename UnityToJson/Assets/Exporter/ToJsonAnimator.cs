@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonAnimator {
 
-    void Export(ToJsonContext context, JSONObject jsonobj, Animator ani)
+    public static void Export(ToJsonContext context, JSONObject jsonobj, Animator ani)
 	{
 
 	}
