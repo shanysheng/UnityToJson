@@ -10,5 +10,8 @@ using UnityEngine;
 
 public class ToJsonRigidBody {
 
+    public static void Export(ToJsonContext context, JSONObject goObj, Rigidbody rigidbody)
+    {
 
+    }
 }

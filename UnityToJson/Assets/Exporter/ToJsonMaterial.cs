@@ -123,7 +123,7 @@ public class ToJsonMaterial {
         return "";
     }
 
-    public static JSONObject ExportMaterial(Material material)
+    public static JSONObject Export(ToJsonContext context, Material material)
     {
         JSONObject jsonobj = JSONObject.obj;
 

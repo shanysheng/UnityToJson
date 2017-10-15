@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonMeshRenderer {
 
-	public static void ExportMeshRenderer(JSONObject goObj, MeshRenderer mrender)
+    public static void Export(ToJsonContext context, JSONObject goObj, MeshRenderer mrender)
     {
 		JSONObject jsonobj = JSONObject.obj;
 
@@ -18,15 +18,14 @@ public class ToJsonMeshRenderer {
 		jsonobj.AddField ("receiveshadow", mrender.receiveShadows);
 
 		if (mrender.sharedMaterial != null) {
-			JSONObject matObj = ToJsonMaterial.ExportMaterial (mrender.sharedMaterial);
+            JSONObject matObj = ToJsonMaterial.Export(context, mrender.sharedMaterial);
 			jsonobj.AddField ("materialdef", matObj);
 		}
 
-
 		if (mrender.gameObject.GetComponent<MeshFilter> () != null) {
 			MeshFilter filter = mrender.gameObject.GetComponent<MeshFilter> ();
-			if (filter.sharedMesh != null)
-				ToJsonMesh.ExportMesh (jsonobj, filter.sharedMesh);
+			//if (filter.sharedMesh != null)
+			//	ToJsonMesh.Export (jsonobj, filter.sharedMesh);
 		}
 
         goObj.AddField("meshrender", jsonobj);

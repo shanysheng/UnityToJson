@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonCamera 
 {
-	public static void ExportCamera(JSONObject goObj, Camera incam)
+    public static void Export(ToJsonContext context, JSONObject goObj, Camera incam)
     {
 		JSONObject jsonobj = JSONObject.obj;
 

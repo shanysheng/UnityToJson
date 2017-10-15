@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonLight {
 
-	public static void ExportLight(JSONObject goObj, Light light)
+    public static void Export(ToJsonContext context, JSONObject goObj, Light light)
 	{
 		JSONObject jsonobj = JSONObject.obj;
 		jsonobj.AddField ("type", light.type.ToString ());

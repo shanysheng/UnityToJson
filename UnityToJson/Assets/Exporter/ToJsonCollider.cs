@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonCollider {
 
-	public static void ExportCollider(JSONObject jsonGo, GameObject go)
+    public static void Export(ToJsonContext context, JSONObject jsonGo, GameObject go)
 	{
 		if (go.GetComponent<BoxCollider>() != null)
 			ExportBoxCollider(jsonGo, go.GetComponent<BoxCollider>());

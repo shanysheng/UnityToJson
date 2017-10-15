@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonEnvironment {
 
-	public static JSONObject ExportEnvironment()
+    public static JSONObject Export(ToJsonContext context)
 	{
 		JSONObject jsonobj = JSONObject.obj;
 

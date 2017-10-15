@@ -10,5 +10,8 @@ using UnityEngine;
 
 public class ToJsonLineRenderer {
 
+    public static void Export(ToJsonContext context, JSONObject goObj, LineRenderer linerenderer)
+    {
 
+    }
 }

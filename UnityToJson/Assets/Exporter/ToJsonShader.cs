@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonShader {
 
-    void ExportShader(Shader inshader)
+    public static void Export(ToJsonContext context, Shader inshader)
 	{
 
 	}

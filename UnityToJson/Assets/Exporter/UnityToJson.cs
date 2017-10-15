@@ -16,6 +16,8 @@ public class UnityToJsonExporter
 	[MenuItem("UnityToJson/ExportActiveScene")]
 	static void ExportActiveScene() 
 	{
+        ToJsonContext jsoncontext = new ToJsonContext();
+
 		string targetpath = EditorUtility.SaveFilePanel("Save json file to", "", "test", "json");
 		if (targetpath.Length != 0)
 		{
@@ -34,7 +36,7 @@ public class UnityToJsonExporter
 			for (int i = 0; i < root_count; ++i) {
 				GameObject go = goArray [i];
 				JSONObject rootobj = JSONObject.obj;
-				ToJsonGameObject.ExportGameObject (rootobj, go);
+                ToJsonGameObject.Export(jsoncontext, rootobj, go);
 				childArray.Add (rootobj);
 			}
 

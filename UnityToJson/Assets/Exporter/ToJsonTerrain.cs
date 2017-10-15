@@ -10,5 +10,8 @@ using UnityEngine;
 
 public class ToJsonTerrain {
 
+    public static void Export(ToJsonContext context, JSONObject goObj, Terrain terrain)
+    {
 
+    }
 }

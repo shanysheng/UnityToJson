@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class ToJsonParticleSystem {
 
-	public static void ExportParticleSystem(JSONObject goObj, ParticleSystem incam)
+    public static void Export(ToJsonContext context, JSONObject goObj, ParticleSystem incam)
 	{
 
 	}
